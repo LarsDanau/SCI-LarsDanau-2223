@@ -16,6 +16,12 @@ cashflows = [-100, 50, 60, 70, 100, 20]
 # Antoord: 4,40%
 print(f"Interest Rate: { 12 * npf.rate(40*12, -1300, 0, 1700000)}")
 
+# Net Present Value (NPV) / Netto Contante Waarde (NCW)= Wordt gebruik om te kijken of een project/investering genoeg winst op zal leveren. Er wordt gekeken naar toekomstige cashflows.
+# Een positieve NPV = Waard om te ondernemen
+# NPV Van 121.55, positief getal! Het project is het waard om te ondernemen
+rate = 0.112
+cashflows = [-100, 50, 60, 70, 100, 20]
+print(f"Net Present Value: {npf.npv(rate, cashflows)}")
 
 # Internal Rate of Return (IRR)
 # De Internal Rate Of Return (IRR) wordt gedefinieerd als de disconteringsvoet waarbij de NPV gelijk is aan nul.
@@ -23,14 +29,6 @@ print(f"Interest Rate: { 12 * npf.rate(40*12, -1300, 0, 1700000)}")
 # Antwoord: Er is dus een discount rate nodig van 20% om de NPV waarde 0 te maken
 cashflows = [-100, 30, 40, 40, 50]
 print(f"Internal Rate of Return: {npf.irr(cashflows)}")
-
-
-# Net Present Value (NPV) / Netto Contante Waarde (NCW)= Wordt gebruik om te kijken of een project/investering genoeg winst op zal leveren. Er wordt gekeken naar toekomstige cashflows.
-# Een positieve NPV = Waard om te ondernemen
-# NPV Van 121.55, positief getal! Het project is het waard om te ondernemen
-rate = 0.112
-cashflows = [-100, 50, 60, 70, 100, 20]
-print(f"Net Present Value: {npf.npv(rate, cashflows)}")
 
 
 # Future Value (FV)
